@@ -13,13 +13,16 @@ const App = () => {
     <NavBar />
     <h1>App central</h1>
     <Routes>
-      <Route path="/" element={<Inicio />} />
-      <Route element={<Login />} path="/login"></Route>
-          
-      <Route path="/" element={<LayoutContainerForm />}>
-          
-          <Route element={<Registro />} path="/registro"></Route>
-      </Route>
+          <Route path="/" element={
+            <RequireAuth>
+              <Inicio />
+            </RequireAuth>
+          }
+          />
+          <Route path="/" element={<LayoutContainerForm/>}>
+              <Route element={<Login />} path="/login"></Route>  
+              <Route element={<Registro />} path="/registro"></Route>
+          </Route>
     </Routes>
   </>
   )
