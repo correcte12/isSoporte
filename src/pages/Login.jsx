@@ -1,15 +1,21 @@
-import { useState } from "react";
+import { useContext, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import logoMediano from "../assets/logo_is_mediano.jpg";
 import axios from "axios";
+import { UserContext } from "../context/UserContext";
 
 const Login = () => {
   //const baseURL = "https://vmodapache.scalecloud.net/ispartes/";
   const baseURL = "https://vmodapache.scalecloud.net/ispartes/";
   const restoURL = "menu.pro?";
-
-  const [password, setPassword] = useState("");
-  const [usuario, setUsuario] = useState("");
+  
+ 
+  const [password, setPassword] = useState ("");
+  const [usuario, setUsuario] = useState ("");
+  
+  const {user, setUser, usuari, setUsuari} = useContext(UserContext);
+  //console.log(user)
+ 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -22,6 +28,8 @@ const Login = () => {
       if (msg === "Error usuario o contraseña") {
         navigate("/");
       } else {
+        setUser(true)
+        setUsuari(usuario)
         navigate("/dashboard");
       }
     } catch (error) {

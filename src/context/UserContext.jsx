@@ -4,8 +4,8 @@ import arrayPartes from '../assets/partes'
 export const UserContext = createContext();
 
 const UserProvider = ({children}) => {
-    const [user, setUser] = useState(null)
-    const [usuario, setUsuario] = useState()
+    const [user, setUser] = useState(false)
+    const [usuari, setUsuari] = useState()
     const [partes, setPartes] = useState([])
     
     useEffect(() => {
@@ -15,7 +15,7 @@ const UserProvider = ({children}) => {
     }, []);
 
         return (
-        <UserContext.Provider value={{user: user, usuario: usuario, partes: partes}}>
+        <UserContext.Provider value={{user: user, setUser: setUser, usuari: usuari, setUsuari: setUsuari, partes: partes}}>
             {children}
         </UserContext.Provider>
         );

@@ -1,15 +1,20 @@
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
+import ListaPartes from "../components/ListaPartes";
 
 const Dashboard = () => { 
-    const {usuario, partes} = useContext (UserContext);
-    //console.log(partes)
+    const {usuari, partes} = useContext (UserContext);
+    console.log(usuari);
+    console.log(partes);
+
         return (
-            <>
-                DashBoard. 
-                En estos momentos hay {partes.length} partes controlados por el usuario {usuario}
-            </>
-        )
+          <div>
+            DashBoard. En estos momentos hay {partes.length} partes controlados
+            por el usuario {usuari}
+            
+            <ListaPartes />
+          </div>
+        );
  };
 
  export default Dashboard;
