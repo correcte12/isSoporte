@@ -13,7 +13,11 @@ module.exports = {
       center: true,
       padding: '12rem',
     },
-    extend: {}, 
+    extend: {
+      fontFamily: {
+        asap: ['Asap', 'sans-serif'],
+      }
+    }, 
   },
   plugins: [
     require('flowbite/plugin')

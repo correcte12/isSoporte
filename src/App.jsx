@@ -1,10 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 
-import Inicio from "./pages/Inicio";
+// import Inicio from "./pages/Inicio";
 import Login from "./pages/Login";
 import Registro from "./pages/Registro";
 import LayoutContainerForm from "./layouts/LayoutContainerForm";
 import NavBar from "./components/NavBar";
+import Inicio2 from "./components/Inicio2";
 
 
 const App = () => { 
@@ -15,7 +16,7 @@ const App = () => {
     <Routes>
           <Route path="/" element={
             <RequireAuth>
-              <Inicio />
+              <Inicio2 />
             </RequireAuth>
           }
           />
