@@ -19,7 +19,7 @@ const App = () => {
             </RequireAuth>
           }
           />
-          <Route path="/" element={<LayoutContainerForm/>}>
+          <Route path="/" element={<LayoutPrivate/>}>
               <Route element={<Login />} path="/login"></Route>  
               <Route element={<Registro />} path="/registro"></Route>
           </Route>

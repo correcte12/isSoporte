@@ -6,6 +6,9 @@ module.exports = {
     "./node_modules/flowbite/**/*.js",
   ],
   theme: {
+    colors: {
+      'teal': '#13636a',
+    },
     container: {
       center: true,
       padding: '12rem',

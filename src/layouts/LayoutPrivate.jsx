@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Footer from "../components/Footer";
 
 
 const LayoutPrivate = () => { 
@@ -7,7 +8,7 @@ const LayoutPrivate = () => {
         <>
 
             <Outlet />
-            
+            <Footer />
         </>
     )
 };

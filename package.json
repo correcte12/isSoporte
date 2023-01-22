@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@notus-pro/react": "^1.0.1",
     "axios": "^1.2.2",
     "flowbite": "^1.6.2",
     "react": "^18.2.0",
